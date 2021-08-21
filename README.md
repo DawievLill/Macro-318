@@ -1,5 +1,5 @@
 # Macro-318
-Code repository for an udergraduate macroeconomics course.
+Code repository for an undergraduate macroeconomics course.
 
 # Course outline
 
