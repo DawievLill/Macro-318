@@ -12,3 +12,5 @@ Code repository for an undergraduate macroeconomics course.
 # Resources
 
 **Textbook**: Williamson, S. Macroeconomics. 4th edition. 
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/DawievLill/Macro-318/HEAD)
