@@ -16,7 +16,7 @@ This course schedule will be updated frequently, so please check before lecture 
 
 |  Lecture  | Topic                                                          | Notebook                                                                                                                          |
 |--------|-------------------------------------------------------------- |--------------------------------------------------------------------------------------------------------------------------------|
-| #1 | Introduction to programming |  [Notebook 1](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut1_introduction.ipynb) |
+| #1 | Introduction to Julia |  [Notebook 1](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut1_introduction.ipynb) |
 | #2 | Consumption model  |  |
 | #3 | Working with data    |    |
 | #4 | Solow model |    |
