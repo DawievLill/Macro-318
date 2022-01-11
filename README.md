@@ -16,7 +16,7 @@ This course schedule will be updated frequently, so please check before lecture 
 
 |  Lecture  | Theme | Topic + Notebook                                                         | Reading                                                                                                                            |
 |--------|-----|-------------------------------------------------------------- |--------------------------------------------------------------------------------------------------------------------------------|
-| #1 | Julia | Introduction to programming   |   |
+| #1 | Julia | Introduction to programming -- [Tutorial 1](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut1_introduction.ipynb)   |   |
 | #2 | Optimsation | Consumption model  |  |
 | #3 | Simulation | Consumption model    |    |
 | #4 | Dynamics | Solow model |    |
