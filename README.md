@@ -14,12 +14,12 @@ Below are my details. You can contact me via email.
 
 This course schedule will be updated frequently, so please check before lecture for the requisite readings and lecture notes. 
 
-|  Lecture  | Theme | Topic + Notebook                                                         | Reading                                                                                                                            |
-|--------|-----|-------------------------------------------------------------- |--------------------------------------------------------------------------------------------------------------------------------|
-| #1 | Julia | Introduction to programming -- [Tutorial 1](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut1_introduction.ipynb)   |   |
-| #2 | Optimsation | Consumption model  |  |
-| #3 | Simulation | Consumption model    |    |
-| #4 | Dynamics | Solow model |    |
+|  Lecture  | Topic                                                          | Notebook                                                                                                                          |
+|--------|-------------------------------------------------------------- |--------------------------------------------------------------------------------------------------------------------------------|
+| #1 | Introduction to programming |  [Notebook 1](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut1_introduction.ipynb) |
+| #2 | Consumption model  |  |
+| #3 | Working with data    |    |
+| #4 | Solow model |    |
 
 
 ## Final project
