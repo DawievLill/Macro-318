@@ -12,11 +12,11 @@ Below are my details. You can contact me via email.
 
 ## Course schedule 
 
-This course schedule will be updated frequently, so please check before lecture for the requisite readings and lecture notes. 
+This course schedule will be updated frequently, so please check before the tutorial for the video recording and notes
 
-|  Lecture  | Topic                                                          | Notebook                                                                                                                          |
+|  Tutorial | Topic                                                          | Notebook                                                                                                                          |
 |--------|-------------------------------------------------------------- |--------------------------------------------------------------------------------------------------------------------------------|
-| #1 | Introduction to Julia |  [Notebook 1](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut1_introduction.ipynb) |
+| #1 | Introduction to Julia | [Notebook 1](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut1_introduction.ipynb) |
 | #2 | Consumption model  |  |
 | #3 | Working with data    |    |
 | #4 | Solow model |    |
