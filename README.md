@@ -16,7 +16,9 @@ In order to run these tutorials online, without installing anything, you can fol
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/DawievLill/Macro-318/HEAD)
 
-This course schedule will be updated frequently, so please check before the tutorial for the video recording and notes
+Once the program has finished running you need to go to the notebooks folder and then click on the appropriate notebook. 
+
+This course schedule will be updated frequently, so please check before the tutorial for the video recording and notes. The links to the notebooks can also be found below. However, these are not interactive, so you can not run them unless you have Python, Julia and Jupyter installed on your computer. You will only be able to view their content. I will speak about this some more in the lecture. 
 
 |  Tutorial | Topic                                                          | Notebook                                                                                                                          |
 |--------|-------------------------------------------------------------- |--------------------------------------------------------------------------------------------------------------------------------|
