@@ -12,6 +12,10 @@ Below are my details. You can contact me via email.
 
 ## Course schedule 
 
+In order to run these tutorials online, without installing anything, you can follow the following link. 
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/DawievLill/Macro-318/HEAD)
+
 This course schedule will be updated frequently, so please check before the tutorial for the video recording and notes
 
 |  Tutorial | Topic                                                          | Notebook                                                                                                                          |
