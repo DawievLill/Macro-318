@@ -1,6 +1,10 @@
 # Macroeconomics 318 Tutorials 
 
-These turorials are provide an introduction to computational methods for macroeconomics. 
+These turorials provide an introduction to computational methods for macroeconomics. 
+
+Most of the material will also be made available via SUNLearn. However, for the most up to date version of the work you can refer here. 
+
+It is not required that you know how `git` and `Github` works in order to work through the tutorials. I will give some basic instructions in the first tutorial, so those that want to delve more into version control are able to get started.  
 
 Below are my details. You can contact me via email. 
 
@@ -28,9 +32,9 @@ This course schedule will be updated frequently, so please check before the tuto
 | #4 | Solow model |    |
 
 
-## Final project
+## Tutorial exercises
 
-In this part of the course there is no exam, only a final project. We will discuss this project in more detail during the semester. However, the basic idea is that you apply machine learning techniques to any type of data that you find interesting. The topic should ideally be related to economics. Please consult with me about your topics, so that we can talk about the availability of data and whether the project is feasible. 
+In this class we will be doing several tutorial exercises. Some of them will be done by hand and others on computer. The exercises for each week will be posted on this Github page as soon as possible. I will also post them on SUNLearn if that is easier to access for students. 
 
 ## Resources
 
