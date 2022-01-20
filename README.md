@@ -24,12 +24,12 @@ Once the program has finished running you need to go to the notebooks folder and
 
 This course schedule will be updated frequently, so please check before the tutorial for the video recording and notes. The links to the notebooks can also be found below. However, these are not interactive, so you can not run them unless you have Python, Julia and Jupyter installed on your computer. You will only be able to view their content. I will speak about this some more in the lecture. 
 
-|  Tutorial | Topic                                                          | Notebook                                                                                                                          |
-|--------|-------------------------------------------------------------- |--------------------------------------------------------------------------------------------------------------------------------|
-| #1 | Introduction to Julia | [Notebook 1](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut1_introduction.ipynb) |
-| #2 | Consumption model  | [Notebook 2](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut2_consumer_problem.ipynb) |
-| #3 | Working with data    |    |
-| #4 | Solow model |    |
+|  Tutorial | Topic                                                          | Notebook  | Problem Set |
+|--------|-------------------------------------------------------------- |--------------------------------------------------------------------------------------------------------------------------------| |--------------------------------------------------------------------------------------------------------------------------------|
+| #1 | Introduction to Julia | [Notebook 1](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut1_introduction.ipynb) | |
+| #2 | Consumption model  | [Notebook 2](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut2_consumer_problem.ipynb) | |
+| #3 | Working with data    |    | |
+| #4 | Solow model |    | |
 
 
 ## Tutorial exercises
