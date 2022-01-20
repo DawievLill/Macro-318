@@ -40,6 +40,13 @@ For a good introduction to Julia I would recommend,
 - [Julia] Paul Soderlind. Julia Tutorial. https://github.com/PaulSoderlind/JuliaTutorial
 - [Julia] Ben Lauwens and Allen Downey (2018). Think Julia: How to Think Like a Computer Scientist. https://benlauwens.github.io/ThinkJulia.jl/latest/book.html
 
+Good introductory notes for computational economics that use Python are the following
+
+- [Python] Fedor Iskhakov. Foundations of Computational Economics. https://fedor.iskh.me/compecon
+- [Python] Jeppe Druedahl. Introduction to Programming and Numerical Analysis. https://numeconcopenhagen.netlify.app/
+
+I have used these resources to compile these notes and tried to give the proper acknowledgment throughout. 
+
 **Textbook**: Williamson, S. Macroeconomics. 4th edition. 
 
 
