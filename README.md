@@ -27,9 +27,10 @@ This course schedule will be updated frequently, so please check before the tuto
 |  Tutorial | Topic  | Notebook  | Problem Set |
 |--------|-----------|-----------------|----------------|
 | #1 | Introduction to Julia | [Notebook 1](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut1_introduction.ipynb) | |
-| #2 | Consumption model  | [Notebook 2](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut2_consumer_problem.ipynb) | |
-| #3 | Working with data    |  [Notebook 3](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut3_data_math.ipynb)  | |
-| #4 | Solow model |  [Notebook 4](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut4_solow.ipynb)  | |
+| #2 | Math and Data basics  |  | |
+| #3 | Optimisation and the consumer problem    |   | |
+| #4 | Firms and the labour market |    | |
+| #4 | Solow model |    | |
 
 
 ## Tutorial exercises
