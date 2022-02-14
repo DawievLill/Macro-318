@@ -1,5 +1,8 @@
 # Macroeconomics 318 Tutorials 
 
+[`Schedule`](#schedule) | [`Exercises`](#exercises) |
+[`Resources`](#resources) 
+
 These turorials provide an introduction to computational methods for macroeconomics. 
 
 Most of the material will also be made available via SUNLearn. However, for the most up to date version of the work you can refer here. 
@@ -14,7 +17,7 @@ Below are my details. You can contact me via email.
 | Office | Schumann 511 |
 | GitHub | [DawievLill](https://github.com/DawievLill) |
 
-## Course schedule 
+## Schedule 
 
 In order to run these tutorials online, without installing anything, you can follow the following link. 
 
@@ -32,7 +35,7 @@ This course schedule will be updated frequently, so please check before the tuto
 | #4 | The Solow-Swan model |  [[.ipynb](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut4_solow.ipynb) / [.html]()]  | |
 
 
-## Tutorial exercises
+## Exercises
 
 In this class we will be doing several tutorial exercises. Some of them will be done by hand and others on computer. The exercises for each week will be posted on this Github page as soon as possible. I will also post them on SUNLearn if that is easier to access for students. 
 
