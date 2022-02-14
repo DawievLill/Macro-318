@@ -26,10 +26,10 @@ This course schedule will be updated frequently, so please check before the tuto
 
 |  Tutorial | Topic  | Notebook  | Problem Set |
 |--------|-----------|-----------------|----------------|
-| #1 | Introduction to Julia | [[.ipynb](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut1_introduction.ipynb) / [.html](https://raw.githack.com/DawievLill/Macro-318/main/html/tut1_introduction.html) / [.pdf ](https://github.com/DawievLill/Macro-318/blob/main/pdf/tut1_introduction.pdf)]  | |
-| #2 | Data, statistics and basic math  | [[.ipynb](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut2_data_analysis.ipynb) / [.html]() / [.pdf ]()] | |
-| #3 | Optimisation and the consumer problem    | [[.ipynb](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut3_optimisation.ipynb) / [.html]() / [.pdf ]()]  | |
-| #4 | The Solow-Swan model |  [[.ipynb](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut4_solow.ipynb) / [.html]() / [.pdf ]()]  | |
+| #1 | Introduction to Julia | [[.ipynb](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut1_introduction.ipynb) / [.html](https://raw.githack.com/DawievLill/Macro-318/main/html/tut1_introduction.html)]  | |
+| #2 | Data, statistics and basic math  | [[.ipynb](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut2_data_analysis.ipynb) / [.html]()] | |
+| #3 | Optimisation and the consumer problem    | [[.ipynb](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut3_optimisation.ipynb) / [.html]()]  | |
+| #4 | The Solow-Swan model |  [[.ipynb](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut4_solow.ipynb) / [.html]()]  | |
 
 
 ## Tutorial exercises
