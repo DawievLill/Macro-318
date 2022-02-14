@@ -1,3 +1,0 @@
-
-
-println("Hello from Binder!")
