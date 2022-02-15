@@ -1,6 +1,6 @@
 # Macroeconomics 318 Tutorials 
 
-[`Schedule`](#schedule) | [`Exercises`](#exercises) |
+[`Notebooks`](#notebooks) | [`Schedule`](#schedule) | [`Exercises`](#exercises) |
 [`Resources`](#resources) 
 
 These turorials provide an introduction to computational methods for macroeconomics. 
@@ -17,13 +17,23 @@ Below are my details. You can contact me via email.
 | Office | Schumann 511 |
 | GitHub | [DawievLill](https://github.com/DawievLill) |
 
-## Schedule 
+## Notebooks
 
 In order to run these tutorials online, without installing anything, you can follow the following link. 
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/DawievLill/Macro-318/HEAD)
 
 Once the program has finished running you need to go to the notebooks folder and then click on the appropriate notebook. 
+
+You can also view the notebooks in their HTML form by clicking on the link below. 
+
+Finally, you can view the notebook at [nbviewer](https://nbviewer.org/) by copying and pasting the notebook URL. 
+
+If you are still struggling, you can go to the PDF folder on this repository and view the PDF. 
+
+I will create a video to showcase the different ways to access files. 
+
+## Schedule 
 
 This course schedule will be updated frequently, so please check before the tutorial for the video recording and notes. The links to the notebooks can also be found below. However, these are not interactive, so you can not run them unless you have Python, Julia and Jupyter installed on your computer. You will only be able to view their content. I will speak about this some more in the lecture. 
 
