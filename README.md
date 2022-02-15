@@ -7,7 +7,7 @@ These turorials provide an introduction to computational methods for macroeconom
 
 Most of the material will also be made available via SUNLearn. However, for the most up to date version of the work you can refer here. 
 
-It is not required that you know how `git` and `Github` works in order to work through the tutorials. I will give some basic instructions in the first tutorial, so those that want to delve more into version control are able to get started.  
+It is not required that you know how `Git` and `Github` works in order to work through the tutorials. I will give some basic instructions in the first tutorial, so those that want to delve more into version control are able to get started.  
 
 Below are my details. You can contact me via email. 
 
