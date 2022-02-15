@@ -31,7 +31,7 @@ Finally, you can view the notebook at [nbviewer](https://nbviewer.org/) by copyi
 
 If you are still struggling, you can go to the PDF folder on this repository and view the PDF. 
 
-I will create a video to showcase the different ways to access files. 
+For those of you who want to run the notebooks locally (on your own computer), find the installation instructions at **section 1.3** of the QuantEcon site [here](https://julia.quantecon.org/getting_started_julia/getting_started.html#id6)
 
 ## Schedule 
 
