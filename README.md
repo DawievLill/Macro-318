@@ -19,11 +19,9 @@ Below are my details. You can contact me via email.
 
 ## Notebooks
 
-In order to run these tutorials online, without installing anything, you can follow the following link. 
+In order to run these tutorials online, without installing anything, you can follow the following link --> [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/DawievLill/Macro-318/HEAD)
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/DawievLill/Macro-318/HEAD)
-
-Once the program has finished running you need to go to the notebooks folder and then click on the appropriate notebook. 
+> **NB**: Wait for the program to finish running. Once the program has finished running you need to go to the notebooks folder and then click on the appropriate notebook. You can then run the code in the cells one by one. 
 
 You can also view the notebooks in their HTML form by clicking on the link below. 
 
