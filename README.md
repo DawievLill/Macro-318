@@ -37,12 +37,12 @@ For those of you who want to run the notebooks locally (on your own computer), f
 
 This course schedule will be updated frequently, so please check before the tutorial for the video recording and notes. The links to the notebooks can also be found below. However, these are not interactive, so you can not run them unless you have Python, Julia and Jupyter installed on your computer. You will only be able to view their content. I will speak about this some more in the lecture. 
 
-|  Tutorial | Topic  | Notebook  | Problem Set |
-|--------|-----------|-----------------|----------------|
-| #1 | Introduction to Julia | [[.ipynb](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut1_introduction.ipynb) / [.html](https://raw.githack.com/DawievLill/Macro-318/main/html/tut1_introduction.html)]  | [[.ipynb](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut1_ps.ipynb) / [.html](https://raw.githack.com/DawievLill/Macro-318/main/html/tut1_ps.html)] |
-| #2 | Data, statistics and basic math  | [[.ipynb](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut2_data_analysis.ipynb) / [.html](https://raw.githack.com/DawievLill/Macro-318/main/html/tut2_data_analysis.html)] | |
-| #3 | Optimisation and the consumer problem    | [[.ipynb](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut3_optimisation.ipynb) / [.html](https://raw.githack.com/DawievLill/Macro-318/main/html/tut3_optimisation.html)]  | |
-| #4 | The Solow-Swan model |  [[.ipynb](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut4_solow.ipynb) / [.html]()]  | |
+|  Tutorial | Topic  | Notebook  | Slides |  Problem Set |
+|--------|-----------|-----------------|----------------|----------------|
+| #1 | Introduction to Julia | [[.ipynb](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut1_introduction.ipynb) / [.html](https://raw.githack.com/DawievLill/Macro-318/main/html/tut1_introduction.html)]  | [[.ipynb](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut1_introduction.ipynb) / [.html](https://raw.githack.com/DawievLill/Macro-318/main/html/tut1_introduction.html)]  | [[.ipynb](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut1_ps.ipynb) / [.html](https://raw.githack.com/DawievLill/Macro-318/main/html/tut1_ps.html)] |
+| #2 | Data, statistics and basic math  | [[.ipynb](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut2_data_analysis.ipynb) / [.html](https://raw.githack.com/DawievLill/Macro-318/main/html/tut2_data_analysis.html)] | [[.ipynb](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut2_data_analysis.ipynb) / [.html](https://raw.githack.com/DawievLill/Macro-318/main/html/tut2_data_analysis.html)] | |
+| #3 | Optimisation and the consumer problem    | [[.ipynb](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut3_optimisation.ipynb) / [.html](https://raw.githack.com/DawievLill/Macro-318/main/html/tut3_optimisation.html)]  | [[.ipynb](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut3_optimisation.ipynb) / [.html](https://raw.githack.com/DawievLill/Macro-318/main/html/tut3_optimisation.html)]  | |
+| #4 | The Solow-Swan model |  [[.ipynb](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut4_solow.ipynb) / [.html]()]  | [[.ipynb](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut4_solow.ipynb) / [.html]()]  | |
 
 
 ## Exercises
