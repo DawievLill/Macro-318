@@ -37,6 +37,14 @@ For those of you who want to run the notebooks locally (on your own computer), f
 
 This course schedule will be updated frequently, so please check before the tutorial for the video recording and notes. The links to the notebooks can also be found below. However, these are not interactive, so you can not run them unless you have Python, Julia and Jupyter installed on your computer. You will only be able to view their content. I will speak about this some more in the lecture. 
 
+**Compulsory content**: The slides contain all the compulsory content and are a shortened version of the full notebooks. 
+
+If you want a deeper understanding of the material you can access the **notebooks** for more in depth explanations. However, if you are only interested in completing the problem sets then the information in the slides will be enough. 
+
+If you are considering postgraduate studies in Economics I recommend that you read all the content in the **notebooks**. This will greatly help with your preparation. 
+
+There are also `optional` sections in the notebooks that are meant for students who have an interest in computational methods. These sections are generally a bit more difficult. 
+
 |  Tutorial | Topic  | Notebook  | Slides |  Problem Set |
 |--------|-----------|-----------------|----------------|----------------|
 | #1 | Introduction to Julia | [[.ipynb](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut1_introduction.ipynb) / [.html](https://raw.githack.com/DawievLill/Macro-318/main/html/tut1_introduction.html)]  | [[.ipynb](https://github.com/DawievLill/Macro-318/blob/main/slides/tut1_slides.ipynb) / [.html](https://raw.githack.com/DawievLill/Macro-318/main/slides/tut1_slides.html)]  | [[.ipynb](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut1_ps.ipynb) / [.html](https://raw.githack.com/DawievLill/Macro-318/main/slides/tut1_slides.html)] |
