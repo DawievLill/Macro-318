@@ -1,13 +1,64 @@
 <!DOCTYPE html>
 <html>
-<head><meta charset="utf-8" />
+<head>
 
-<title>tut1_slides</title>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+
+<title>tut1_slides slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
+<!-- General and theme style sheets -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/reveal.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/theme/simple.css" id="theme">
 
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+}
+
+</script>
+
+<!--[if lt IE 9]>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/html5shiv.js"></script>
+<![endif]-->
+
+<!-- Loading the mathjax macro -->
+<!-- Load mathjax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
+    <!-- MathJax configuration -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+    </script>
+    <!-- End of mathjax configuration -->
+
+<!-- Get Font-awesome from cdn -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 
 <style type="text/css">
     /*!
@@ -13040,59 +13091,133 @@ ul.typeahead-list  > li > a.pull-right {
 
 <style type="text/css">
 /* Overrides of notebook CSS for static HTML export */
-body {
-  overflow: visible;
-  padding: 8px;
+.reveal {
+  font-size: 160%;
 }
-
-div#notebook {
-  overflow: visible;
-  border-top: none;
-}@media print {
-  div.cell {
-    display: block;
-    page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
-  }
-  div.output { 
-    display: block;
-    page-break-inside: avoid; 
-  }
+.reveal pre {
+  width: inherit;
+  padding: 0.4em;
+  margin: 0px;
+  font-family: monospace, sans-serif;
+  font-size: 80%;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+}
+.reveal pre code {
+  padding: 0px;
+}
+.reveal section img {
+  border: 0px solid black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+}
+.reveal i {
+  font-style: normal;
+  font-family: FontAwesome;
+  font-size: 2em;
+}
+.reveal .slides {
+  text-align: left;
+}
+.reveal.fade {
+  opacity: 1;
+}
+.reveal .progress {
+  position: static;
+}
+.reveal .controls .navigate-left,
+.reveal .controls .navigate-left.enabled {
+  border-right-color: #727272;
+}
+.reveal .controls .navigate-left.enabled:hover,
+.reveal .controls .navigate-left.enabled.enabled:hover {
+  border-right-color: #dfdfdf;
+}
+.reveal .controls .navigate-right,
+.reveal .controls .navigate-right.enabled {
+  border-left-color: #727272;
+}
+.reveal .controls .navigate-right.enabled:hover,
+.reveal .controls .navigate-right.enabled.enabled:hover {
+  border-left-color: #dfdfdf;
+}
+.reveal .controls .navigate-up,
+.reveal .controls .navigate-up.enabled {
+  border-bottom-color: #727272;
+}
+.reveal .controls .navigate-up.enabled:hover,
+.reveal .controls .navigate-up.enabled.enabled:hover {
+  border-bottom-color: #dfdfdf;
+}
+.reveal .controls .navigate-down,
+.reveal .controls .navigate-down.enabled {
+  border-top-color: #727272;
+}
+.reveal .controls .navigate-down.enabled:hover,
+.reveal .controls .navigate-down.enabled.enabled:hover {
+  border-top-color: #dfdfdf;
+}
+.reveal .progress span {
+  background: #727272;
+}
+div.input_area {
+  padding: 0.06em;
+}
+div.code_cell {
+  background-color: transparent;
+}
+div.prompt {
+  width: 11ex;
+  padding: 0.4em;
+  margin: 0px;
+  font-family: monospace, sans-serif;
+  font-size: 80%;
+  text-align: right;
+}
+div.output_area pre {
+  font-family: monospace, sans-serif;
+  font-size: 80%;
+}
+div.output_prompt {
+  /* 5px right shift to account for margin in parent container */
+  margin: 5px 5px 0 0;
+}
+div.text_cell.rendered .rendered_html {
+  /* The H1 height seems miscalculated, we are just hidding the scrollbar */
+  overflow-y: hidden;
+}
+a.anchor-link {
+  /* There is still an anchor, we are only hidding it */
+  display: none;
+}
+.rendered_html p {
+  text-align: inherit;
+}
+::-webkit-scrollbar
+{
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar *
+{
+  background:transparent;
+}
+::-webkit-scrollbar-thumb
+{
+  background: #727272 !important;
 }
 </style>
 
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
 <link rel="stylesheet" href="custom.css">
 
-<!-- Loading mathjax macro -->
-<!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
-    <!-- MathJax configuration -->
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-            processEscapes: true,
-            processEnvironments: true
-        },
-        // Center justify equations in code and markdown cells. Elsewhere
-        // we use CSS to left justify single line equations in code cells.
-        displayAlign: 'center',
-        "HTML-CSS": {
-            styles: {'.MathJax_Display': {"margin": 0}},
-            linebreaks: { automatic: true }
-        }
-    });
-    </script>
-    <!-- End of mathjax configuration --></head>
-<body>
-  <div tabindex="-1" id="notebook" class="border-box-sizing">
-    <div class="container" id="notebook-container">
+</head>
 
+
+<body>
+
+
+<div class="reveal">
+<div class="slides">
+<section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13101,7 +13226,7 @@ div#notebook {
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13118,7 +13243,7 @@ div#notebook {
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13132,7 +13257,7 @@ div#notebook {
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13144,7 +13269,7 @@ div#notebook {
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13159,7 +13284,7 @@ div#notebook {
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13169,7 +13294,7 @@ div#notebook {
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
@@ -13200,7 +13325,7 @@ div#notebook {
 </div>
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13211,310 +13336,7 @@ div#notebook {
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-julia"><pre><span></span><span class="k">import</span> <span class="n">Pkg</span>
-
-<span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;DataFrames&quot;</span><span class="p">)</span> <span class="c"># Package for working with data</span>
-<span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;GLM&quot;</span><span class="p">)</span> <span class="c"># Package for linear regression</span>
-<span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;LinearAlgebra&quot;</span><span class="p">)</span> <span class="c"># Package for linear algebra applications</span>
-<span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;Plots&quot;</span><span class="p">)</span> <span class="c"># Package for plotting</span>
-<span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;TypeTree&quot;</span><span class="p">)</span> <span class="c"># Package that shows type hierarchy in tree form</span>
-
-<span class="k">using</span> <span class="n">Base</span><span class="o">:</span> <span class="n">show_supertypes</span>
-<span class="k">using</span> <span class="n">DataFrames</span>
-<span class="k">using</span> <span class="n">GLM</span>
-<span class="k">using</span> <span class="n">LinearAlgebra</span>
-<span class="k">using</span> <span class="n">Plots</span>
-<span class="k">using</span> <span class="n">TypeTree</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre><span class="ansi-green-intense-fg ansi-bold">    Updating</span> registry at `C:\Users\Dawie\.julia\registries\General`
-<span class="ansi-green-intense-fg ansi-bold">    Updating</span> git-repo `https://github.com/JuliaRegistries/General.git`
-<span class="ansi-green-intense-fg ansi-bold">   Resolving</span> package versions...
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> GR_jll ────────────────── v0.64.0+0
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> InlineStrings ─────────── v1.1.2
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> JpegTurbo_jll ─────────── v2.1.2+0
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> Referenceables ────────── v0.1.2
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> StatsFuns ─────────────── v0.9.15
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> MutableArithmetics ────── v0.3.3
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> LabelledArrays ────────── v1.7.1
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> TimerOutputs ──────────── v0.5.15
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> PlotUtils ─────────────── v1.1.3
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> RecipesPipeline ───────── v0.5.0
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> Roots ─────────────────── v1.3.14
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> DataFramesMeta ────────── v0.10.0
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> RecursiveArrayTools ───── v2.24.2
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> StaticArrays ──────────── v1.3.5
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> InitialValues ─────────── v0.3.1
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> EllipsisNotation ──────── v1.3.0
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> ThreadsX ──────────────── v0.1.9
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> Static ────────────────── v0.5.5
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> GLM ───────────────────── v1.6.1
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> RealDot ───────────────── v0.1.0
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> AutoHashEquals ────────── v0.2.0
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> IRTools ───────────────── v0.4.5
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> FileIO ────────────────── v1.13.0
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> JSON ──────────────────── v0.21.3
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> SpecialFunctions ──────── v2.1.2
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> SciMLBase ─────────────── v1.26.3
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> Symbolics ─────────────── v4.3.0
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> DataFrames ────────────── v1.3.2
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> MultivariatePolynomials ─ v0.4.2
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> SentinelArrays ────────── v1.3.12
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> NaNMath ───────────────── v0.3.7
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> DefineSingletons ──────── v0.1.2
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> GLFW_jll ──────────────── v3.3.6+0
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> MicroCollections ──────── v0.1.2
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> GR ────────────────────── v0.64.0
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> Zygote ────────────────── v0.6.35
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> ExprTools ─────────────── v0.1.8
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> DynamicPolynomials ────── v0.4.3
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> ChainRules ────────────── v1.27.0
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> BangBang ──────────────── v0.3.35
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> StatsBase ─────────────── v0.33.15
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> DiffRules ─────────────── v1.10.0
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> ArgCheck ──────────────── v2.3.0
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> Zstd_jll ──────────────── v1.5.2+0
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> Expat_jll ─────────────── v2.4.4+0
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> Setfield ──────────────── v0.8.2
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> Parsers ───────────────── v2.2.2
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> AbstractFFTs ──────────── v1.1.0
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> Plots ─────────────────── v1.25.10
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> JLLWrappers ───────────── v1.4.1
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> InverseFunctions ──────── v0.1.2
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> LogExpFunctions ───────── v0.3.6
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> ArrayInterface ────────── v4.0.3
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> ChainRulesCore ────────── v1.12.0
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> TypeTree ──────────────── v0.3.0
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> OpenSSL_jll ───────────── v1.1.13+0
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> TermInterface ─────────── v0.2.3
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> Crayons ───────────────── v4.1.1
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> Transducers ───────────── v0.4.72
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> FillArrays ────────────── v0.12.8
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> StructArrays ──────────── v0.6.4
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> ForwardDiff ───────────── v0.10.25
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> Requires ──────────────── v1.3.0
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> Chain ─────────────────── v0.4.10
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> SymbolicUtils ─────────── v0.19.7
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> ChangesOfVariables ────── v0.1.2
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> DensityInterface ──────── v0.4.0
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> Metatheory ────────────── v1.3.3
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> Distributions ─────────── v0.25.48
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> CSV ───────────────────── v0.10.2
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> ColorSchemes ──────────── v3.17.1
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> RDatasets ─────────────── v0.7.7
-┌ Warning: The active manifest file at `C:\Users\Dawie\Dropbox\2022\318-macro\git\Macro-318\Manifest.toml` has an old format that is being maintained.
-│ To update to the new format run `Pkg.upgrade_manifest()` which will upgrade the format without re-resolving.
-└ @ Pkg.Types C:\buildbot\worker\package_win64\build\usr\share\julia\stdlib\v1.7\Pkg\src\manifest.jl:287
-<span class="ansi-green-intense-fg ansi-bold">  No Changes</span> to `C:\Users\Dawie\Dropbox\2022\318-macro\git\Macro-318\Project.toml`
-<span class="ansi-green-intense-fg ansi-bold">    Updating</span> `C:\Users\Dawie\Dropbox\2022\318-macro\git\Macro-318\Manifest.toml`
- <span class="ansi-black-intense-fg"> [88015f11] </span><span class="ansi-green-intense-fg">+ LERC_jll v3.0.0+1</span>
- <span class="ansi-black-intense-fg"> [89763e89] </span><span class="ansi-yellow-intense-fg">↑ Libtiff_jll v4.3.0+0 ⇒ v4.3.0+1</span>
-<span class="ansi-green-intense-fg ansi-bold">    Building</span> GR → `C:\Users\Dawie\.julia\scratchspaces\44cfe95a-1eb2-52ea-b672-e2afdf69b78f\9f836fb62492f4b0f0d3b06f55983f2704ed0883\build.log`
-┌ Warning: The active manifest file is an older format with no julia version entry. Dependencies may have been resolved with a different julia version.
-└ @ nothing C:\Users\Dawie\Dropbox\2022\318-macro\git\Macro-318\Manifest.toml:0
-<span class="ansi-green-intense-fg ansi-bold">Precompiling</span> project...
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Chain</span>
-<span class="ansi-green-fg">  ✓ </span>TypeTree
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">ExprTools</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">InverseFunctions</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">InitialValues</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">ArgCheck</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">AutoHashEquals</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">CompositeTypes</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">FillArrays</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">RealDot</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">CompositionsBase</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">DefineSingletons</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">NaNMath</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Requires</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">SentinelArrays</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">TermInterface</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Bijections</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">ChainRulesCore</span>
-<span class="ansi-yellow-fg">  ✓ </span><span class="ansi-black-intense-fg">JLLWrappers</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Baselet</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Crayons</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Static</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Referenceables</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">RuntimeGeneratedFunctions</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">IRTools</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">DensityInterface</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Mocking</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">MutableArithmetics</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">TimerOutputs</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Setfield</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">ChangesOfVariables</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">AbstractFFTs</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Latexify</span>
-<span class="ansi-green-fg">  ✓ </span>CategoricalArrays
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">FileIO</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">OpenSSL_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Graphite2_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Libmount_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Bzip2_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">StaticArrays</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Xorg_libXau_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">libpng_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Rmath_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">libfdk_aac_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">LAME_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Ogg_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Pixman_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">EarCut_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">JpegTurbo_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">LERC_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Xorg_libXdmcp_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">ColorSchemes</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">x265_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Zstd_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">x264_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Expat_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">LZO_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Opus_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Xorg_xtrans_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Wayland_protocols_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Libiconv_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Libffi_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Libgpg_error_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">PCRE_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">OpenSpecFun_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">ChainRules</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Xorg_libpthread_stubs_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Libuuid_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">FriBidi_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">ArrayInterface</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">FreeType2_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">SplittablesBase</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">MultivariatePolynomials</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">LogExpFunctions</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">BangBang</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Rmath</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Contour</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">DiffResults</span>
-<span class="ansi-green-fg">  ✓ </span>Roots
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">libvorbis_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">StructArrays</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Libtiff_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">PrettyTables</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">EllipsisNotation</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Libgcrypt_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">XML2_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Fontconfig_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">MicroCollections</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">LabelledArrays</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">DynamicPolynomials</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">IntervalSets</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">StatsBase</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">XSLT_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">RecursiveArrayTools</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Wayland_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Gettext_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Xorg_libxcb_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">SpecialFunctions</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Xorg_xcb_util_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Glib_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">PlotUtils</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Transducers</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">DiffRules</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Xorg_libX11_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Xorg_xcb_util_image_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Xorg_xcb_util_renderutil_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Xorg_xcb_util_keysyms_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">DomainSets</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">GeometryBasics</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Xorg_xcb_util_wm_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">StatsFuns</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Xorg_libXrender_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Xorg_libXext_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">ThreadsX</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">SciMLBase</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Xorg_libXfixes_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Xorg_libxkbfile_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">RecipesPipeline</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Libglvnd_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Xorg_libXinerama_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">StatsModels</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Xorg_libXrandr_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Cairo_jll</span>
-<span class="ansi-green-fg">  ✓ </span>ForwardDiff
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Xorg_libXcursor_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Xorg_libXi_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Xorg_xkbcomp_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">PlotThemes</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">HarfBuzz_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">GLFW_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Xorg_xkeyboard_config_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">libass_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">xkbcommon_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Metatheory</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Distributions</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Qt5Base_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">FFMPEG_jll</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">FFMPEG</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">GR_jll</span>
-<span class="ansi-green-fg">  ✓ </span>GLM
-<span class="ansi-green-fg">  ✓ </span>Zygote
-<span class="ansi-yellow-fg">  ✓ </span><span class="ansi-black-intense-fg">Parsers</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">InlineStrings</span>
-<span class="ansi-yellow-fg">  ✓ </span><span class="ansi-black-intense-fg">JSON</span>
-<span class="ansi-green-fg">  ✓ </span>DataFrames
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">WeakRefStrings</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">SymbolicUtils</span>
-<span class="ansi-green-fg">  ✓ </span>DataFramesMeta
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">GR</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">TimeZones</span>
-<span class="ansi-green-fg">  ✓ </span>CSV
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">RData</span>
-<span class="ansi-green-fg">  ✓ </span>RDatasets
-<span class="ansi-green-fg">  ✓ </span>Symbolics
-<span class="ansi-green-fg">  ✓ </span>Plots
-  155 dependencies successfully precompiled in 90 seconds (60 already precompiled)
-  <span class="ansi-yellow-fg">3</span> dependencies precompiled but different versions are currently loaded. Restart julia to access the new versions
-<span class="ansi-green-intense-fg ansi-bold">   Resolving</span> package versions...
-<span class="ansi-green-intense-fg ansi-bold">  No Changes</span> to `C:\Users\Dawie\Dropbox\2022\318-macro\git\Macro-318\Project.toml`
-<span class="ansi-green-intense-fg ansi-bold">  No Changes</span> to `C:\Users\Dawie\Dropbox\2022\318-macro\git\Macro-318\Manifest.toml`
-<span class="ansi-green-intense-fg ansi-bold">   Resolving</span> package versions...
-<span class="ansi-green-intense-fg ansi-bold">  No Changes</span> to `C:\Users\Dawie\Dropbox\2022\318-macro\git\Macro-318\Project.toml`
-<span class="ansi-green-intense-fg ansi-bold">  No Changes</span> to `C:\Users\Dawie\Dropbox\2022\318-macro\git\Macro-318\Manifest.toml`
-<span class="ansi-green-intense-fg ansi-bold">   Resolving</span> package versions...
-<span class="ansi-green-intense-fg ansi-bold">  No Changes</span> to `C:\Users\Dawie\Dropbox\2022\318-macro\git\Macro-318\Project.toml`
-<span class="ansi-green-intense-fg ansi-bold">  No Changes</span> to `C:\Users\Dawie\Dropbox\2022\318-macro\git\Macro-318\Manifest.toml`
-<span class="ansi-green-intense-fg ansi-bold">   Resolving</span> package versions...
-<span class="ansi-green-intense-fg ansi-bold">  No Changes</span> to `C:\Users\Dawie\Dropbox\2022\318-macro\git\Macro-318\Project.toml`
-<span class="ansi-green-intense-fg ansi-bold">  No Changes</span> to `C:\Users\Dawie\Dropbox\2022\318-macro\git\Macro-318\Manifest.toml`
-┌ Info: Precompiling GLM [38e38edf-8417-5370-95a0-9cbb8c7f171a]
-└ @ Base loading.jl:1423
-WARNING: could not import StatsBase.adjr² into GLM
-┌ Info: Precompiling Plots [91a5bcdd-55d7-5caf-9e0b-520d859cae80]
-└ @ Base loading.jl:1423
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
@@ -13540,7 +13362,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13549,7 +13371,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
@@ -13582,7 +13404,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
@@ -13615,7 +13437,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13624,7 +13446,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 
 </div>
 </div>
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13633,7 +13455,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
@@ -13666,7 +13488,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
@@ -13699,7 +13521,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13707,7 +13529,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[7]:</div>
@@ -13740,7 +13562,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
@@ -13773,7 +13595,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13783,7 +13605,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 
 </div>
 </div>
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13798,7 +13620,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13808,7 +13630,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13865,7 +13687,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 
 </div>
 </div>
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13873,7 +13695,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
@@ -13886,7 +13708,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
@@ -13919,7 +13741,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[11]:</div>
@@ -13952,7 +13774,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[12]:</div>
@@ -13985,7 +13807,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[13]:</div>
@@ -14018,7 +13840,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[14]:</div>
@@ -14051,7 +13873,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14059,7 +13881,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
@@ -14092,7 +13914,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[16]:</div>
@@ -14125,7 +13947,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[17]:</div>
@@ -14158,7 +13980,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14199,7 +14021,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[18]:</div>
@@ -14212,7 +14034,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[19]:</div>
@@ -14245,7 +14067,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[20]:</div>
@@ -14278,7 +14100,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[21]:</div>
@@ -14311,7 +14133,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14322,7 +14144,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14331,7 +14153,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[22]:</div>
@@ -14364,7 +14186,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[23]:</div>
@@ -14397,7 +14219,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[24]:</div>
@@ -14430,7 +14252,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[25]:</div>
@@ -14463,7 +14285,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14474,7 +14296,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14485,7 +14307,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[33]:</div>
@@ -14520,7 +14342,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[34]:</div>
@@ -14553,7 +14375,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[35]:</div>
@@ -14587,7 +14409,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14597,7 +14419,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[36]:</div>
@@ -14630,7 +14452,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[37]:</div>
@@ -14665,7 +14487,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14673,7 +14495,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 
 </div>
 </div>
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14687,7 +14509,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14695,7 +14517,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[38]:</div>
@@ -14731,7 +14553,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[39]:</div>
@@ -14768,7 +14590,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14778,7 +14600,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
@@ -14880,7 +14702,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
@@ -14916,7 +14738,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[48]:</div>
@@ -14949,7 +14771,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[50]:</div>
@@ -14983,7 +14805,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14991,7 +14813,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[53]:</div>
@@ -15027,7 +14849,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[54]:</div>
@@ -15063,7 +14885,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[55]:</div>
@@ -15099,7 +14921,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15107,7 +14929,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[57]:</div>
@@ -15143,7 +14965,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[58]:</div>
@@ -15179,7 +15001,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[59]:</div>
@@ -15215,7 +15037,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15226,7 +15048,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[40]:</div>
@@ -15262,7 +15084,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[41]:</div>
@@ -15300,7 +15122,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15312,7 +15134,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15320,7 +15142,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[60]:</div>
@@ -15356,7 +15178,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[61]:</div>
@@ -15392,7 +15214,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[62]:</div>
@@ -15428,7 +15250,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15437,7 +15259,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[64]:</div>
@@ -15470,7 +15292,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[65]:</div>
@@ -15503,7 +15325,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[67]:</div>
@@ -15539,7 +15361,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[68]:</div>
@@ -15576,7 +15398,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15587,7 +15409,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15596,7 +15418,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[70]:</div>
@@ -15640,7 +15462,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15648,7 +15470,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 
 </div>
 </div>
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15658,7 +15480,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[72]:</div>
@@ -15694,7 +15516,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[76]:</div>
@@ -15730,7 +15552,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[78]:</div>
@@ -15766,7 +15588,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15776,7 +15598,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
@@ -15816,7 +15638,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15825,7 +15647,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
@@ -15845,7 +15667,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15854,7 +15676,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 
 </div>
 </div>
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15863,7 +15685,7 @@ WARNING: could not import StatsBase.adjr² into GLM
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
@@ -15904,7 +15726,7 @@ Any[0, 1, 4, 9, 16]
 </div>
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15914,7 +15736,7 @@ Any[0, 1, 4, 9, 16]
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[12]:</div>
@@ -15952,7 +15774,7 @@ Any[0, 1, 4, 9, 16]
 </div>
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15964,7 +15786,7 @@ Any[0, 1, 4, 9, 16]
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15972,7 +15794,7 @@ Any[0, 1, 4, 9, 16]
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[14]:</div>
@@ -16007,7 +15829,7 @@ Any[0, 1, 4, 9, 16]
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -16016,7 +15838,7 @@ Any[0, 1, 4, 9, 16]
 
 </div>
 </div>
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
@@ -16049,7 +15871,7 @@ Any[0, 1, 4, 9, 16]
 </div>
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -16057,7 +15879,7 @@ Any[0, 1, 4, 9, 16]
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[20]:</div>
@@ -16092,7 +15914,7 @@ Any[0, 1, 4, 9, 16]
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[21]:</div>
@@ -16125,7 +15947,7 @@ Any[0, 1, 4, 9, 16]
 </div>
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -16134,7 +15956,7 @@ Any[0, 1, 4, 9, 16]
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[22]:</div>
@@ -16176,7 +15998,7 @@ Any[0, 1, 4, 9, 16]
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[23]:</div>
@@ -16209,7 +16031,7 @@ Any[0, 1, 4, 9, 16]
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[24]:</div>
@@ -16242,7 +16064,7 @@ Any[0, 1, 4, 9, 16]
 </div>
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -16253,7 +16075,7 @@ Any[0, 1, 4, 9, 16]
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -16262,7 +16084,7 @@ Any[0, 1, 4, 9, 16]
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[27]:</div>
@@ -16288,7 +16110,7 @@ Any[0, 1, 4, 9, 16]
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[28]:</div>
@@ -16321,7 +16143,7 @@ Any[0, 1, 4, 9, 16]
 </div>
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -16331,7 +16153,7 @@ Any[0, 1, 4, 9, 16]
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[31]:</div>
@@ -16364,7 +16186,7 @@ Any[0, 1, 4, 9, 16]
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[32]:</div>
@@ -16397,7 +16219,7 @@ Any[0, 1, 4, 9, 16]
 </div>
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -16405,7 +16227,7 @@ Any[0, 1, 4, 9, 16]
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[35]:</div>
@@ -16574,7 +16396,7 @@ M1988.36 198.898 L2280.8 198.898 L2280.8 95.2176 L1988.36 95.2176  Z
 </div>
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -16583,7 +16405,7 @@ M1988.36 198.898 L2280.8 198.898 L2280.8 95.2176 L1988.36 95.2176  Z
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[36]:</div>
@@ -16728,7 +16550,7 @@ M193.936 1486.45 L2352.76 1486.45 L2352.76 123.472 L193.936 123.472  Z
 </div>
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -16737,7 +16559,7 @@ M193.936 1486.45 L2352.76 1486.45 L2352.76 123.472 L193.936 123.472  Z
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[37]:</div>
@@ -16921,12 +16743,74 @@ M1988.36 250.738 L2280.8 250.738 L2280.8 95.2176 L1988.36 95.2176  Z
 </div>
 </div>
 
+</div></div></section></section>
 </div>
-    </div>
-  </div>
-</body>
+</div>
 
- 
+<script>
+
+require(
+    {
+      // it makes sense to wait a little bit when you are loading
+      // reveal from a cdn in a slow connection environment
+      waitSeconds: 15
+    },
+    [
+      "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/head.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/js/reveal.js"
+    ],
+
+    function(head, Reveal){
+
+        // Full list of configuration options available here: https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+
+            transition: "slide",
+
+            // Optional libraries used to extend on reveal.js
+            dependencies: [
+                { src: "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/classList.js",
+                  condition: function() { return !document.body.classList; } },
+                { src: "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/notes/notes.js",
+                  async: true,
+                  condition: function() { return !!document.body.classList; } }
+            ]
+        });
+
+        var update = function(event){
+          if(MathJax.Hub.getAllJax(Reveal.getCurrentSlide())){
+            MathJax.Hub.Rerender(Reveal.getCurrentSlide());
+          }
+        };
+
+        Reveal.addEventListener('slidechanged', update);
+
+        function setScrollingSlide() {
+            var scroll = false
+            if (scroll === true) {
+              var h = $('.reveal').height() * 0.95;
+              $('section.present').find('section')
+                .filter(function() {
+                  return $(this).height() > h;
+                })
+                .css('height', 'calc(95vh)')
+                .css('overflow-y', 'scroll')
+                .css('margin-top', '20px');
+            }
+        }
+
+        // check and set the scrolling slide every time the slide change
+        Reveal.addEventListener('slidechanged', setScrollingSlide);
+
+    }
+
+);
+</script>
+
+</body>
 
 
 </html>
