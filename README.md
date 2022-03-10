@@ -35,7 +35,7 @@ If you are considering postgraduate studies in Economics I recommend that you re
 
 There are also `optional` sections in the notebooks that are meant for students who have an interest in computational methods. These sections are generally a bit more difficult. 
 
-|  Tutorial | Topic  | Notebook (Long)  | Notebook (short) | Slides | Problem Set |
+|  Tutorial | Topic  | Longer notes  | Shorter notes (compulsory) | Slides | Problem Set |
 |--------|-----------|-----------------|----------------|----------------|---------|
 | #1 | Introduction to Julia | [[.ipynb](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut1_introduction.ipynb) / [.html](https://raw.githack.com/DawievLill/Macro-318/main/html/tut1_introduction.html)]  | [[.ipynb](https://github.com/DawievLill/Macro-318/blob/main/slides/tut1_slides.ipynb) / [.html](https://raw.githack.com/DawievLill/Macro-318/main/slides/tut1_slides.html)]  | [.html](https://raw.githack.com/DawievLill/Macro-318/main/slides/tut1_slides.slides.html) | |
 | #2 | Data, statistics and basic math  | [[.ipynb](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut2_data_analysis.ipynb) / [.html](https://raw.githack.com/DawievLill/Macro-318/main/html/tut2_data_analysis.html)] | [[.ipynb](https://github.com/DawievLill/Macro-318/blob/main/notebooks/tut2_data_analysis.ipynb) / [.html](https://raw.githack.com/DawievLill/Macro-318/main/html/tut2_data_analysis.html)] | | |
