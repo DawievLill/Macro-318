@@ -19,17 +19,7 @@ Below are my details. You can contact me via email.
 
 ## Notebooks
 
-In order to run these tutorials online, without installing anything, you can follow the link below:
-
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/DawievLill/Macro-318/HEAD)
-
-> **NB**: Wait for the program to finish running. Once the program has finished running you need to go to the notebooks folder and then click on the appropriate notebook. You can then run the code in the cells one by one. 
-
-You can also view the notebooks in their HTML form by clicking on the link below. 
-
-Finally, you can view the notebook at [nbviewer](https://nbviewer.org/) by copying and pasting the notebook URL. 
-
-If you are still struggling, you can go to the PDF folder on this repository and view the PDF. 
+You can view the notebooks in their HTML form by clicking on the link below. 
 
 For those of you who want to run the notebooks locally (on your own computer), find the installation instructions at **section 1.3** of the QuantEcon site [here](https://julia.quantecon.org/getting_started_julia/getting_started.html#id6)
 
